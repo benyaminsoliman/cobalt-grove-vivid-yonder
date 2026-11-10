@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Quill Desk",
+      "hasCanvas": false,
+      "bodyTextLen": 7373,
+      "bodyTextHash": "72066a2e9a05618789c7cd8533e180c142663370729d6886adb71e6245fb4766",
+      "bodyTextPrefix": "Quill Desk Your key. Their model. The open email. Assistant and ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Quill Desk",
+      "hasCanvas": false,
+      "bodyTextLen": 887,
+      "bodyTextHash": "144105b8c6179e232af8f612ae35b10968ef013e497a435a95c53c1276034ed7",
+      "bodyTextPrefix": "Quill Desk Your key. Their model. The open email. Assistant Outl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

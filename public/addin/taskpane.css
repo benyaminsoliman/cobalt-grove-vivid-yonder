@@ -1,0 +1,170 @@
+:root {
+  color: #1a1714;
+  background: #f3efe6;
+  font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 12px;
+  background: #f3efe6;
+  color: #1a1714;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; }
+
+h1, h2 {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 560;
+  margin: 0;
+}
+
+h1 { font-size: 1.25rem; }
+h2 { font-size: 1.05rem; }
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #0e6b52;
+  color: #f3fff8;
+  display: grid;
+  place-items: center;
+  font-family: Fraunces, Georgia, serif;
+}
+
+.titles { flex: 1; min-width: 0; }
+#subtitle, .hint { color: #6f675e; margin: 0; }
+.hint { font-size: 12px; }
+
+label {
+  display: grid;
+  gap: 4px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  border: 1px solid #e0d7c8;
+  background: #fffcf7;
+  border-radius: 8px;
+  padding: 8px 10px;
+  min-height: 40px;
+}
+
+textarea { resize: vertical; }
+
+button.primary, .actions button, #translate, #ask, #revise, #save {
+  min-height: 44px;
+  border-radius: 8px;
+  border: 0;
+  background: #0e6b52;
+  color: #f3fff8;
+  font-weight: 600;
+}
+
+button.ink, #ask {
+  width: 100%;
+  margin-top: 8px;
+  background: #1a1714;
+  color: #f3efe6;
+}
+
+button.ghost {
+  min-height: 36px;
+  border: 0;
+  background: transparent;
+  color: #0e6b52;
+  font-weight: 600;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.translate {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.translate select { flex: 1; }
+#translate { padding: 0 12px; }
+
+#copilot-modes {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+#copilot-modes button {
+  flex: 1;
+  min-height: 40px;
+  border-radius: 999px;
+  border: 1px solid #e0d7c8;
+  background: #fffcf7;
+  color: #1a1714;
+}
+
+#copilot-modes button.active {
+  background: #0e6b52;
+  color: #f3fff8;
+  border-color: #0e6b52;
+}
+
+#meta {
+  background: #fffcf7;
+  border: 1px solid #e0d7c8;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+#subject { margin: 0; font-weight: 600; }
+
+.error {
+  background: #8d2f2f;
+  color: #fff6f6;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+#result {
+  white-space: pre-wrap;
+  background: #fffcf7;
+  border: 1px solid #e0d7c8;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 6px;
+}
+
+.result-bar, .follow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.follow { margin-top: 8px; }
+.follow input { flex: 1; }
+#revise { padding: 0 12px; }
+
+a { color: #0e6b52; }

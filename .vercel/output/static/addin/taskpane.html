@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quill Desk</title>
+  <link rel="stylesheet" href="taskpane.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,560&display=swap" rel="stylesheet">
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="mark" aria-hidden="true">Q</div>
+    <div class="titles">
+      <h1 id="title">Quill Desk</h1>
+      <p id="subtitle">Email assistant</p>
+    </div>
+    <button type="button" id="settings-toggle" class="ghost">Key</button>
+  </header>
+
+  <section id="settings">
+    <label id="provider-wrap">Provider
+      <select id="provider"></select>
+    </label>
+    <div id="copilot-modes" hidden>
+      <button type="button" data-mode="github">GitHub Models</button>
+      <button type="button" data-mode="azure">Azure OpenAI</button>
+    </div>
+    <label id="azure-wrap" hidden>Azure host
+      <input id="azure-host" placeholder="my-resource.openai.azure.com" autocomplete="off">
+    </label>
+    <label id="region-wrap" hidden>Region
+      <select id="region"></select>
+    </label>
+    <label><span id="model-name">Model</span>
+      <select id="model"></select>
+    </label>
+    <label>Model id <span class="hint">optional, overrides the list</span>
+      <input id="custom-model" placeholder="Exact id from the console" autocomplete="off">
+    </label>
+    <label id="key-label"><span id="key-name">API key</span>
+      <input id="api-key" type="password" autocomplete="off">
+    </label>
+    <p class="hint"><a id="docs" href="" target="_blank" rel="noreferrer">Where to get the key</a></p>
+    <label>Standing instructions
+      <textarea id="instructions" rows="3" placeholder="Short bullets. Never promise a date."></textarea>
+    </label>
+    <button type="button" id="save" class="primary">Save and read mail</button>
+    <p id="settings-note" class="hint"></p>
+  </section>
+
+  <section id="main" hidden>
+    <div id="meta">
+      <p id="subject"></p>
+      <p id="from" class="hint"></p>
+    </div>
+    <div id="manual">
+      <label>From <input id="mail-from"></label>
+      <label>Subject <input id="mail-subject"></label>
+      <label>Body <textarea id="mail-body" rows="8"></textarea></label>
+    </div>
+    <div class="actions">
+      <button type="button" data-action="summarize">Summarize</button>
+      <button type="button" data-action="reply">Draft reply</button>
+      <button type="button" data-action="actions">Action items</button>
+      <button type="button" data-action="tone">Read the tone</button>
+    </div>
+    <div class="translate">
+      <select id="language">
+        <option>English</option>
+        <option>Spanish</option>
+        <option>French</option>
+        <option>German</option>
+        <option>Portuguese</option>
+        <option>Arabic</option>
+        <option>Chinese</option>
+        <option>Japanese</option>
+      </select>
+      <button type="button" id="translate">Translate</button>
+    </div>
+    <label>Ask something else
+      <textarea id="custom" rows="2" placeholder="What decision does this need from me?"></textarea>
+    </label>
+    <button type="button" id="ask" class="ink">Send</button>
+    <p id="error" class="error" hidden></p>
+    <p id="loading" class="hint" hidden>Writing…</p>
+    <div id="result-wrap" hidden>
+      <div class="result-bar">
+        <h2>Reply</h2>
+        <button type="button" id="copy" class="ghost">Copy</button>
+        <button type="button" id="insert" class="ghost" hidden>Insert</button>
+      </div>
+      <div id="result"></div>
+      <div class="follow">
+        <input id="followup" placeholder="Shorter, and don’t mention customs">
+        <button type="button" id="revise" class="primary">Revise</button>
+      </div>
+    </div>
+  </section>
+  <script src="taskpane.js"></script>
+</body>
+</html>
